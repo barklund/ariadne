@@ -2,7 +2,7 @@
 
 The tab widget is a very common pattern.
 
-## Levers
+## Optional considerations
 
 When implementing a tab widget, these are the things you will want to consider whether you need/want or not:
 
@@ -13,7 +13,6 @@ Do you want to control focus on the current tab using [roving tabindex](https://
 ### Focus vs selection
 
 Do you want to [automatically select a tab when it is focused](https://www.w3.org/TR/wai-aria-practices/#kbd_selection_follows_focus) or do you want users to actively enable the tab?
-
 
 ### Multiple/zero open tabs
 
@@ -31,4 +30,37 @@ Do you have so many tabs, that you want users to be able to move quickly to the 
 
 Do you want your tabs displayed in horizontal or vertical direction?
 
+### Focusable content in panels
+
+Do you have focusable content in your panels?
+
+## Mandatory considerations
+
+### Use correct roles
+
+### Connect tabs and panels
+
+### Keep panels in DOM
+
+### Respect document reading direction
+
 ## Variants
+
+The following variants are implemented with optional considerations as per above list:
+
+| Variant | Focus management | Focus vs selection | Multiple tabs | Deletion | Home/End | Direction | Focusable panels |
+|-|-|-|-|-|-|-|-|
+| [Minimal](minimal/) | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| [Active descendant](active-descendant/) | _Active descendant_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| [Focus is separate from selection](focus-selection/) | _Roving tabindex_ | _Focus is separete from selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| [Multiple tabs](multiple/) | _Roving tabindex_ | _Focus follows selection_ | _Yes_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| [Deletable tabs](deletable/) | _Roving tabindex_ | _Focus follows selection_ | _No_ | _Yes_ | _No_ | _Horizontal_ | _Focusable content_ |
+| [Long tab list](long/) | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _Yes_ | _Horizontal_ | _Focusable content_ |
+| [Vertical tab list](vertical/) | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Vertical_ | _Focusable content_ |
+| [No focusable content](content/) | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _No focusable content_ |
+| [All](all/) | _Active descendant_ | _Focus is separete from selection_ | _Yes_ | _Yes_ | _Yes_ | _Vertical_ | _No focusable content_ |
+
+And here's some other relevant variants:
+
+* [Minimal RTL](minimal-rtl/) - minimal implementation showing how RTL reading direction is fully supported (e.g. by left-right arrows).
+

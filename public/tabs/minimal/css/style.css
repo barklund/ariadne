@@ -17,7 +17,7 @@
 }
 
 .tab + .tab {
-	border-left-width: 0;
+	border-inline-start: 0;
 }
 
 .tab--active {

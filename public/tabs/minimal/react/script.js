@@ -10,9 +10,15 @@ const Direction = {
   PREVIOUS: "previous",
 };
 
-function useTabs() {
+function useTabs(ref) {
   const [current, setCurrent] = React.useState(null);
   const [tabs, setTabs] = React.useState([]);
+  const [globalDir, setGlobalDir] = React.useState(true);
+  React.useLayoutEffect(
+    () =>
+      setGlobalDir(getComputedStyle(ref.current).direction === "ltr" ? 1 : -1),
+    [ref]
+  );
   const addTab = React.useCallback((name) => {
     setTabs((list) => [
       ...list,
@@ -25,13 +31,16 @@ function useTabs() {
   const goto = React.useCallback(
     (dir) => {
       const offset = tabs.findIndex(({ id }) => id === current);
-      const delta = dir === Direction.PREVIOUS ? -1 : 1;
-      const destination = Math.max(0, Math.min(tabs.length - 1, offset + delta));
+      const delta = globalDir * (dir === Direction.PREVIOUS ? -1 : 1);
+      const destination = Math.max(
+        0,
+        Math.min(tabs.length - 1, offset + delta)
+      );
       const newId = tabs[destination].id;
       setCurrent(newId);
       return newId;
     },
-    [tabs, current]
+    [globalDir, tabs, current]
   );
   React.useEffect(() => {
     if (tabs.length) setCurrent(tabs[0].id);
@@ -47,10 +56,11 @@ function useTabs() {
 }
 
 function Tabs({ name, children }) {
-  const value = useTabs();
+  const ref = React.useRef();
+  const value = useTabs(ref);
   return (
     <TabContext.Provider value={value}>
-      <TabList name={name} />
+      <TabList ref={ref} name={name} />
       {children}
     </TabContext.Provider>
   );
@@ -98,10 +108,10 @@ function useTabList(name) {
   };
 }
 
-function TabList({ name }) {
+function TabListWithoutRef({ name }, ref) {
   const { tablist, tabs } = useTabList(name);
   return (
-    <ul className="tablist" {...tablist}>
+    <ul ref={ref} className="tablist" {...tablist}>
       {tabs.map(({ name, isActive, attrs }) => (
         <li
           key={name}
@@ -114,6 +124,8 @@ function TabList({ name }) {
     </ul>
   );
 }
+
+const TabList = React.forwardRef(TabListWithoutRef);
 
 function useTab(name) {
   const { current, tabs, addTab } = React.useContext(TabContext);
