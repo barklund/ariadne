@@ -89,7 +89,7 @@ function useTabList(name) {
       name,
       isActive,
       attrs: {
-        "aria-controls": `pane${id}`,
+        "aria-controls": `panel${id}`,
         "aria-selected": isActive,
         id: `tab${id}`,
         role: "tab",
@@ -133,7 +133,7 @@ function useTab(name) {
   const self = tabs.find(({ name: tabName }) => tabName === name) || {};
   return {
     "aria-labelledby": `tab${self.id}`,
-    id: `pane${self.id}`,
+    id: `panel${self.id}`,
     role: "tabpanel",
     hidden: current !== self.id,
   };

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Ariadne :: Minimal tab widget :: Vanilla JS (ES2015) implementation
+    </title>
+    <meta
+      name="description"
+      content="This is an example implementation of ARIA best practices for a minimal tab widget in Vanilla JS (ES2015)"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../../../common/style.css" />
+  </head>
+  <body>
+    <header class="meta">
+      <h1>Vanilla JS (ES2015) implementation of a minimal tab widget</h1>
+    </header>
+    <main>
+      <ul class="tablist" role="tablist">
+        <li
+          tabindex="0"
+          class="tab tab--active"
+          role="tab"
+          id="tab1"
+          aria-selected="true"
+          aria-controls="panel1"
+        >
+          Tinky-winky
+        </li>
+        <li
+          tabindex="-1"
+          class="tab"
+          role="tab"
+          id="tab2"
+          aria-selected="false"
+          aria-controls="panel2"
+        >
+          Dipsy
+        </li>
+        <li
+          tabindex="-1"
+          class="tab"
+          role="tab"
+          id="tab3"
+          aria-selected="false"
+          aria-controls="panel3"
+        >
+          Lala
+        </li>
+        <li
+          tabindex="-1"
+          class="tab"
+          role="tab"
+          id="tab4"
+          aria-selected="false"
+          aria-controls="panel4"
+        >
+          Poe
+        </li>
+      </ul>
+      <section
+        class="tabpanel"
+        aria-labelledby="tab1"
+        id="panel1"
+        role="tabpanel"
+      >
+        <h1>Hi, I'm Tinky-Winky</h1>
+        <button>Click me to read more</button>
+      </section>
+      <section
+        hidden
+        class="tabpanel"
+        aria-labelledby="tab2"
+        id="panel2"
+        role="tabpanel"
+      >
+        <h1>Hi, I'm Dipsy</h1>
+        <button>Click me to read more</button>
+      </section>
+      <section
+        hidden
+        class="tabpanel"
+        aria-labelledby="tab3"
+        id="panel3"
+        role="tabpanel"
+      >
+        <h1>Hi, I'm Lala</h1>
+        <button>Click me to read more</button>
+      </section>
+      <section
+        hidden
+        class="tabpanel"
+        aria-labelledby="tab4"
+        id="panel4"
+        role="tabpanel"
+      >
+        <h1>Hi, I'm Poe</h1>
+        <button>Click me to read more</button>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+    <footer class="meta">
+      <h2>What is this?</h2>
+      <p>
+        This is an example implementation of ARIA best practices for a
+        <a href="..">minimal</a> <a href="../..">tab widget</a> in Vanilla JS
+        (ES2015).
+      </p>
+      <p>
+        As a part of the <a href="../../..">Ariadne project</a>, this aims to
+        inspire developers to consider also accessibility aspects of their web
+        applications and in particular see, how little it takes to implement
+        something that everyone can use regardless of abilities.
+      </p>
+    </footer>
+  </body>
+</html>

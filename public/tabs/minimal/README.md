@@ -4,7 +4,7 @@ This is one variation of the [tab widget pattern](../).
 
 ## Implementations
 
-* ❌ Vanilla JS ES2015
+* ✅ [Vanilla JS ES2015](es2015)
 * ✅ [React](react)
 * ❌ React + react-aria
 * ❌ Vue (latest stable)
