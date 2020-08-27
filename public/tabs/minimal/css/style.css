@@ -1,0 +1,30 @@
+.tablist {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.tab {
+	list-style: none;
+	border: 1px solid hotpink;
+	border-width: 1px 1px 0;
+	padding: .5em;
+	cursor: pointer;
+}
+
+.tab:hover {
+	background: pink;
+}
+
+.tab + .tab {
+	border-left-width: 0;
+}
+
+.tab--active {
+	background: hotpink;
+}
+
+.tabpanel {
+	border: 1px solid hotpink;
+	padding: .5em;
+}
