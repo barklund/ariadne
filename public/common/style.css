@@ -1,18 +1,19 @@
 body {
 	margin: 0;
 }
-header, footer, main {
+main,
+.meta {
 	padding: 1em;
 	border: 0 solid olivedrab;
 }
-header, footer {
+.meta {
 	border: 0 solid olivedrab;
 	background-color: palegreen;
 }
-header {
+header.meta {
 	border-bottom-width: 1px;
 }
-footer {
+footer.meta {
 	position: absolute;
 	border-top-width: 1px;
 	bottom: 0;
