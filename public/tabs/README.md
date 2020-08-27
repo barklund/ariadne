@@ -50,17 +50,17 @@ The following variants are implemented with optional considerations as per above
 
 | Variant | Focus management | Focus vs selection | Multiple tabs | Deletion | Home/End | Direction | Focusable panels |
 |-|-|-|-|-|-|-|-|
-| [Minimal](minimal/) ✅ | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
-| Active descendant ❌  | _Active descendant_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
-| Focus is separate from selection ❌ | _Roving tabindex_ | _Focus is separete from selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
-| Multiple tabs ❌ | _Roving tabindex_ | _Focus follows selection_ | _Yes_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
-| Deletable tabs ❌ | _Roving tabindex_ | _Focus follows selection_ | _No_ | _Yes_ | _No_ | _Horizontal_ | _Focusable content_ |
-| Long tab list ❌ | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _Yes_ | _Horizontal_ | _Focusable content_ |
-| Vertical tab list ❌ | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Vertical_ | _Focusable content_ |
-| No focusable content ❌ | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _No focusable content_ |
-| All ❌ | _Active descendant_ | _Focus is separete from selection_ | _Yes_ | _Yes_ | _Yes_ | _Vertical_ | _No focusable content_ |
+| ✅ [Minimal](minimal/) | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| ❌ Active descendant  | _Active descendant_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| ❌ Focus is separate from selection | _Roving tabindex_ | _Focus is separete from selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| ❌ Multiple tabs | _Roving tabindex_ | _Focus follows selection_ | _Yes_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| ❌ Deletable tabs | _Roving tabindex_ | _Focus follows selection_ | _No_ | _Yes_ | _No_ | _Horizontal_ | _Focusable content_ |
+| ❌ Long tab list | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _Yes_ | _Horizontal_ | _Focusable content_ |
+| ❌ Vertical tab list | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Vertical_ | _Focusable content_ |
+| ❌ No focusable content | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _No focusable content_ |
+| ❌ All | _Active descendant_ | _Focus is separete from selection_ | _Yes_ | _Yes_ | _Yes_ | _Vertical_ | _No focusable content_ |
 
 And here's some other relevant variants:
 
-* Minimal RTL ❌ - minimal implementation showing how RTL reading direction is fully supported (e.g. by left-right arrows).
+* ❌ Minimal RTL - minimal implementation showing how RTL reading direction is fully supported (e.g. by left-right arrows).
 
