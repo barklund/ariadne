@@ -18,6 +18,8 @@ Do you want to [automatically select a tab when it is focused](https://www.w3.or
 
 Do you want each tab to have its own open state regardless of the other tabs? This means that you can have multiple or even zero open tabs at any time.
 
+Note that if you support this mode, you inevitably also need to have separate focus and selection support, as you cannot have _focus follows selection_ while allowing keyboard users to open multiple tabs.
+
 ### Tab deletion
 
 Do you want users to be able to delete a tab?
@@ -52,13 +54,13 @@ The following variants are implemented with optional considerations as per above
 |-|-|-|-|-|-|-|-|
 | ✅ [Minimal](minimal/) | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
 | ❌ Active descendant  | _Active descendant_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
-| ❌ Focus is separate from selection | _Roving tabindex_ | _Focus is separete from selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
-| ❌ Multiple tabs | _Roving tabindex_ | _Focus follows selection_ | _Yes_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| ❌ Focus is separate from selection | _Roving tabindex_ | _Focus is separate from selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| ❌ Multiple tabs | _Roving tabindex_ | _Focus is separate from selection_ | _Yes_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
 | ❌ Deletable tabs | _Roving tabindex_ | _Focus follows selection_ | _No_ | _Yes_ | _No_ | _Horizontal_ | _Focusable content_ |
 | ❌ Long tab list | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _Yes_ | _Horizontal_ | _Focusable content_ |
 | ❌ Vertical tab list | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Vertical_ | _Focusable content_ |
 | ❌ No focusable content | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _No focusable content_ |
-| ❌ All | _Active descendant_ | _Focus is separete from selection_ | _Yes_ | _Yes_ | _Yes_ | _Vertical_ | _No focusable content_ |
+| ❌ All | _Active descendant_ | _Focus is separate from selection_ | _Yes_ | _Yes_ | _Yes_ | _Vertical_ | _No focusable content_ |
 
 And here's some other relevant variants:
 
