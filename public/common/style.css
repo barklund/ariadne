@@ -3,10 +3,18 @@ body {
 }
 header, footer, main {
 	padding: 1em;
+	border: 0 solid olivedrab;
+}
+header, footer {
+	border: 0 solid olivedrab;
+	background-color: palegreen;
+}
+header {
+	border-bottom-width: 1px;
 }
 footer {
 	position: absolute;
-	border-top: 1px solid hotpink;
+	border-top-width: 1px;
 	bottom: 0;
 	left: 0;
 	right: 0;
