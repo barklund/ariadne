@@ -50,7 +50,7 @@ The following variants are implemented with optional considerations as per above
 
 | Variant | Focus management | Focus vs selection | Multiple tabs | Deletion | Home/End | Direction | Focusable panels |
 |-|-|-|-|-|-|-|-|
-| ✅ [Minimal](minimal/) | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
+| - [x] [Minimal](minimal/) | _Roving tabindex_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
 | ❌ Active descendant  | _Active descendant_ | _Focus follows selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
 | ❌ Focus is separate from selection | _Roving tabindex_ | _Focus is separete from selection_ | _No_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
 | ❌ Multiple tabs | _Roving tabindex_ | _Focus follows selection_ | _Yes_ | _No_ | _No_ | _Horizontal_ | _Focusable content_ |
