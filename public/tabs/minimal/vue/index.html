@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ariadne :: Minimal tab widget :: Vue implementation</title>
+    <meta
+      name="description"
+      content="This is an example implementation of ARIA best practices for a minimal tab widget in pure Vue"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../../../common/style.css" />
+  </head>
+  <body>
+    <header class="meta">
+      <h1>Vue implementation of a minimal tab widget</h1>
+    </header>
+    <main>
+      <div id="root">
+        <tabs name="Authors" initial="john" :tabs="['john','luke','matthew']">
+          <template slot="tab-john">John</template>
+          <template slot="panel-john">
+            <h1>Hi, I'm John</h1>
+            <button>Click me to read more</button>
+          </template>
+
+          <template slot="tab-luke">Luke</template>
+          <template slot="panel-luke">
+            <h1>Hi, I'm Luke</h1>
+            <button>Click me to read more</button>
+          </template>
+
+          <template slot="tab-matthew">Matthew</template>
+          <template slot="panel-matthew">
+            <h1>Hi, I'm Matthew</h1>
+            <button>Click me to read more</button>
+          </template>
+        </tabs>
+      </div>
+    </main>
+    <script
+      crossorigin
+      src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"
+    ></script>
+    <script src="./script.js"></script>
+    <footer class="meta">
+      <h2>What is this?</h2>
+      <p>
+        This is an example implementation of ARIA best practices for a
+        <a href="..">minimal</a> <a href="../..">tab widget</a> in pure Vue.
+      </p>
+      <p>
+        As a part of the <a href="../../..">Ariadne project</a>, this aims to
+        inspire developers to consider also accessibility aspects of their web
+        applications and in particular see, how little it takes to implement
+        something that everyone can use regardless of abilities.
+      </p>
+    </footer>
+  </body>
+</html>

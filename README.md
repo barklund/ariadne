@@ -16,8 +16,6 @@ Implementations will be made in the following frameworks and framework versions:
 
 * Vanilla JS ES2015
 * React (latest stable)
-* React (latest stable)
-* React (latest stable) + [react-aria (latest stable)](https://react-spectrum.adobe.com/react-aria/getting-started.html)
 * Vue (latest stable)
 * Angular (latest stable)
 

@@ -6,6 +6,5 @@ This is one variation of the [tab widget pattern](../).
 
 * ✅ [Vanilla JS ES2015](es2015)
 * ✅ [React](react)
-* ❌ React + react-aria
-* ❌ Vue (latest stable)
+* ✅ [Vue](vue)
 * ❌ Angular (latest stable)
